@@ -1,0 +1,26 @@
+@page "/car-color"
+
+<PageTitle>Change Color Car</PageTitle>
+@{
+
+}
+<div class="container mt-5">
+    <h1 class="mb-4">Change color car</h1>
+    <div class="d-flex align-items-start">
+        <img src="@currentImage" alt="Car Image" class="w-50">
+        <button class="btn btn-danger ms-2" @onclick="() => handleChangeColor(image1)">Red color</button>
+        <button class="btn btn-secondary ms-2" @onclick="() => handleChangeColor(image2)">Silver color</button>
+        <button class="btn btn-dark ms-2" @onclick="() => handleChangeColor(image3)">Black color</button>
+    </div>
+</div>
+
+@code {
+    private string image1 = $"/resource/products/red-car.jpg";
+    private string image2 = $"/resource/products/silver-car.jpg";
+    private string image3 = $"/resource/products/black-car.jpg";
+    private string currentImage = $"/resource/products/red-car.jpg";
+    void handleChangeColor(string newImage)
+    {
+        currentImage = newImage;
+    }
+}

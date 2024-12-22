@@ -1,0 +1,12 @@
+h1 {
+  font-size: calc(1.725rem + 5.7vw);
+  font-weight: bold;
+}
+.social-media a {
+  text-decoration: none;
+  color: #495057;
+}
+.social-media a:hover {
+  color: #bd5d38;
+  border-color: #bd5d38;
+}
